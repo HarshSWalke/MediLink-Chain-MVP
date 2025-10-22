@@ -10,6 +10,27 @@
   <h1>MediLink Chain – Trusted Medicine Network</h1>
   <button id="pingBtn">Test Backend Connection</button>
   <p id="result"></p>
+  <h2>Register User</h2>
+<form id="registerForm">
+  <input type="text" id="name" placeholder="Name" required>
+  <input type="text" id="shopType" placeholder="Shop Type (chemist/e-pharma)" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="text" id="location" placeholder="Location">
+  <button type="submit">Register</button>
+</form>
+
+<h2>Add Inventory</h2>
+<form id="inventoryForm">
+  <input type="number" id="userId" placeholder="User ID" required>
+  <input type="text" id="medicineName" placeholder="Medicine Name" required>
+  <input type="text" id="batchNo" placeholder="Batch No" required>
+  <input type="number" id="quantity" placeholder="Quantity" required>
+  <input type="date" id="expiry" required>
+  <button type="submit">Add Inventory</button>
+</form>
+
+<p id="apiResult"></p>
+
 
   <script src="script.js"></script>
 </body>
