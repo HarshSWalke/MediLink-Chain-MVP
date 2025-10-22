@@ -30,6 +30,21 @@
 </form>
 
 <p id="apiResult"></p>
+<h2>Blockchain & QR</h2>
+<form id="blockForm">
+  <input type="text" id="batch" placeholder="Batch No" required>
+  <input type="text" id="medName" placeholder="Medicine Name" required>
+  <input type="text" id="sender" placeholder="Sender" required>
+  <input type="text" id="receiver" placeholder="Receiver" required>
+  <button type="submit">Add to Blockchain</button>
+</form>
+
+<div id="qrDisplay"></div>
+
+<h3>Verify Batch</h3>
+<input type="text" id="verifyBatch" placeholder="Enter Batch No">
+<button id="verifyBtn">Verify</button>
+<p id="verifyResult"></p>
 
 
   <script src="script.js"></script>

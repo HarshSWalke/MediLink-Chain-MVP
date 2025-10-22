@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.database import Base, engine
 from app.routes import routes_users, routes_inventory
+from fastapi.staticfiles import StaticFiles
+from app.routes import routes_users, routes_inventory, routes_blockchain
 
 app = FastAPI(title="MediLink Chain Backend")
 
@@ -25,3 +27,6 @@ def ping():
 # Include new routes
 app.include_router(routes_users.router)
 app.include_router(routes_inventory.router)
+
+app.include_router(routes_blockchain.router)
+app.mount("/app/qrcodes", StaticFiles(directory="app/qrcodes"), name="qrcodes")
